@@ -10,12 +10,12 @@ SRC =	$(SRC_DIR)/editline.c \
 
 OBJ = $(SRC=:.c=.o)
 
-LDFLAGS = -Iinclude
+LDFLAGS = -Iinclude -Lsrc
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		   $(CC) $(OBJ) $(SRC_DIR)/libpolysh.a $(LDFLAGS) -o $(NAME)
+		   $(CC) $(OBJ) -lpolysh $(LDFLAGS) -o $(NAME)
 
 re: fclean all
 
