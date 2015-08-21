@@ -176,6 +176,44 @@ char *editline(char *s, const int size, const char *prompt)
 		      lg = pos = strlen(s);
 		      redisplay(s, pos);
 		      break;
+	case Ctrl('K'): if (lg > 0) {
+		   kill_buff = (char*)malloc((strlen(s)*sizeof(char))+1);
+		   *kill_buff = '\0';
+		   strcpy(kill_buff, s);
+		   lg_kill = lg;
+		  // memmove(&s, "", 0);
+		   lg = 0;
+		   //*s = '\0';
+		   redisplay(s, lg);
+		   }
+                   break;
+      case Ctrl('Y'):
+        if(lg_kill != 0){
+          if(lg!=0){
+            s[lg] = '\0';
+            char sp[lg+lg_kill+1];
+            *sp = '\0';
+            strcpy(sp,s);
+            strcat(sp,kill_buff);
+            strcpy(s,sp);
+            print_prompt();
+            printstring(s);
+            lg += lg_kill;
+            pos = lg;
+            redisplay(s, pos);
+          }
+          else{
+            char sp[lg_kill+1];
+            *sp = '\0';
+            strcpy(sp,kill_buff);
+            strcpy(s,sp);
+            print_prompt();
+            printstring(s);
+            lg = lg_kill;
+            pos = lg;
+            redisplay(s, pos);
+          }
+        }
     default:          if (lg < size-1 && ' ' <= c && c <= '~') {
 			memmove(&s[pos+1], &s[pos], lg-pos);
 			s[pos] = c;
