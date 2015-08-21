@@ -5,7 +5,6 @@ SRC_DIR = src
 CC = gcc
 
 SRC =	$(SRC_DIR)/editline.c \
-		$(SRC_DIR)/libpolysh.a \
 		$(SRC_DIR)/main.c
 
 OBJ = $(SRC=:.c=.o)
