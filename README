@@ -1,0 +1,28 @@
+Projet SI3
+
+Le répertoire courant contient plusieurs sous répertoires:
+   - include: contient les fichiers décrivant les composants du
+     programme polysh. Ces fichiers ne doivent pas être modifiés
+
+   - scripts: contient quelques scripts simples pour tests
+     Un script intéressant est le script polyshrc que vous pouvez
+     copier dans ~/.polyshrc. Ce fichier est lancé à chaque démarrage
+     de votre shell s'i est interactif (équivalent au fichier ~/.bashrc)
+
+   - src: ce répertoire est le répertoire où vous devez construire
+     votre projet. Il contient:
+        - le fichier source main.c (qui est le programme principal
+	  de polysh)
+	- la bibliothèque libpolysh.a qui contient tous les composants
+	  de polysh (version compilée).
+	- une version incomplète de editline que l'on utilise ici pour
+     	  voir comment masquer un composant de la bibliothèque avec
+	  une version personnelle.
+	- Le fichier src/README indique sommairement comment travailler
+	  avec les différents fichiers.
+
+   - test: ce répertoire contient quelques tests des composants qui
+     vous sont livrés. Vous pouvez modifier ces fichiers pour voir
+     comment se comportent les éléments qui vous sont fournis sous
+     forme compilée.
+

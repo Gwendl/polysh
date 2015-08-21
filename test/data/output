@@ -1,0 +1,47 @@
+======== # Ce fichier contient des lignes pour tester 
+  eol
+======== # le tokenizer
+  eol
+======== ls -l | wc               -l
+  item [ls]
+  item [-l]
+  pip
+  item [wc]
+  item [-l]
+  eol
+======== ls; pwd				; who;
+  item [ls]
+  semicolon
+  item [pwd]
+  semicolon
+  item [who]
+  semicolon
+  eol
+======== set FOO "une chaine de caractere"
+  item [set]
+  item [FOO]
+  item [une chaine de caractere]
+  eol
+======== set BAR 'une autre chaine'
+  item [set]
+  item [BAR]
+  item [une autre chaine]
+  eol
+======== une erreur 'une chaine 
+  item [une]
+  item [erreur]
+  error [end of line in a string]
+  eol
+======== 'c\'est l\'ete' 
+  item [c'est l'ete]
+  eol
+======== "c'est l'ete"
+  item [c'est l'ete]
+  eol
+======== > >> < | 
+  greater
+  append
+  less
+  pip
+  eol
+END

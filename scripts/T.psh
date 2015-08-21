@@ -1,0 +1,4 @@
+#!/usr/bin/env polysh
+# Un script en polysh			-*- mode: shell-script -*-
+echo "Valeur de la variable BASH:" $BASH
+echo "Valeur de la variable SHELL:" $SHELL

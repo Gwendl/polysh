@@ -1,0 +1,30 @@
+#!/usr/bin/env polysh
+#				-*- mode: shell-script; coding: utf-8 -*-
+#
+# Un petit script qui est lancé au début de chaque shell interactif.
+# Pour cela, faire une copie de ce fichier dans ~/.polyshrc
+#
+
+# On affiche un petit texte
+uname -nom
+
+# On définit un certain nombre de variables
+set v1 "initialisation:"
+set v2 "OK"
+echo $v1 $v2
+
+# Première ligne du fichier password
+read pass < /etc/passwd
+echo "Premiere ligne du fichier password:" $pass
+
+
+# Exemple de  joli prompt en couleur
+#set PROMPT  "[1;31mpolysh$[0m "
+
+# Définition de quelques alias
+alias l "ls -l"
+alias E exit
+alias cf "ls | wc -l"
+
+# La variable DISPLAY permet aux application X11 de fonctionner
+set DISPLAY :0

@@ -1,0 +1,10 @@
+# Ce fichier contient des lignes pour tester 
+# le tokenizer
+ls -l | wc               -l
+ls; pwd				; who;
+set FOO "une chaine de caractere"
+set BAR 'une autre chaine'
+une erreur 'une chaine 
+'c\'est l\'ete' 
+"c'est l'ete"
+> >> < | 

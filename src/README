@@ -1,0 +1,19 @@
+Voila comment construire une version de polysh avec les composants qui
+vous ont été distribués:
+
+     gcc -o polysh -I../include -L. main.c libpolysh.a
+
+Pour construire une version avec une version personnelle de editline.c
+(celle qui est dans ce répertoire, qui est ici pour tester):
+
+     gcc -o polysh -I../include -L. main.c editline.c libpolysh.a
+
+On a juste rajouté le fichier editline.c dans la ligne de
+compilation. Cela a eu pour effet de prendre la version de test
+editline plutôt que celle qui est compilée et stockée dans l'archive
+libpolysh.a
+
+Ca, c'est le principe. Bien-sûr, il faut IMPERATIVEMENT que vous
+construisiez un Makefile pour travailler dans ce répertoire.
+
+A vous de jouer.....

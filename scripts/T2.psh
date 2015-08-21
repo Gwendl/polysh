@@ -1,0 +1,15 @@
+#!/usr/bin/env polysh
+# Un exemple de script polysh	  -*- mode: shell-script; coding: utf-8 -*-
+
+set foo "Un exemple en polysh"
+echo $foo
+
+# Test des arguments (et des redirections au passage)
+echo "Nombre d\'arguments du programme:" $# > /tmp/foo
+echo "Nom du programme:" $0 >> /tmp/foo
+echo "Arguments:" $*  >> /tmp/foo
+
+# On affiche le résultat
+cat < /tmp/foo
+printf "Nombre de lignes dans le fichier foo: "
+cat < /tmp/foo | wc -l
