@@ -1,20 +1,20 @@
 NAME = polysh
 
-SRC_DIR = src
-
 CC = gcc
 
-SRC =	$(SRC_DIR)/editline.c \
-		$(SRC_DIR)/main.c
+SRC =	editline.c \
+		main.c
 
 OBJ = $(SRC=:.c=.o)
 
-LDFLAGS = -Iinclude -Lsrc
+CFLAGS = -I../include
+
+LDFLAGS = -L. -lpolysh 
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		   $(CC) $(OBJ) -lpolysh $(LDFLAGS) -o $(NAME)
+		   $(CC) $(OBJ) $(LDFLAGS) -o $(NAME)
 
 re: fclean all
 
